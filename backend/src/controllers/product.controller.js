@@ -25,8 +25,29 @@ router.get("", async (req,res)=>{
         res.status(500).json({message:err.message,status:"Failed"})
     }
     
-})
+});
 
+router.patch("/:id", async (req,res)=>{
+
+    try{
+        const product= await Product.findByIdAndUpdate(req.params.id).lean().exec();
+    return res.status(201).send(product)
+    }catch(err){
+        res.status(500).json({message:err.message,status:"Failed"})
+    }
+    
+});
+
+router.delete("/:id", async (req,res)=>{
+
+    try{
+        const product=await Product.findByIdAndDelete(req.params.id).lean().exec();
+    return res.status(201).send(product)
+    }catch(err){
+        res.status(500).json({message:err.message,status:"Failed"})
+    }
+    
+});
 
  
 
