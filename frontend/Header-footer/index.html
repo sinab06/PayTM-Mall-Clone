@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<link rel="stylesheet" href="Styles/styles.css">
+
+<body>
+
+    <div id="navbar"></div>
+
+
+    <div id="body"></div>
+
+
+   <div id="footer"> </div>
+</body>
+
+</html>
+
+
+<script type="module">
+
+    import navbar from "./components/navbar.js";
+     let navbar_div = document.getElementById("navbar"); 
+     navbar_div.innerHTML = navbar();
+
+
+
+     import footer from "./components/footer.js";
+     let footer_div = document.getElementById("footer"); 
+     footer_div.innerHTML = footer();
+     
+</script>
+
+<script>
+
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    </script>
