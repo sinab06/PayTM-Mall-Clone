@@ -6,23 +6,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
 
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
     <style>
         #container{
             display: flex;
             background-color: #f3f7f8;
         }
         #container_left {
-            border: 2px solid rgb(45, 20, 185);
             background-color: white;
             width: 22%;
             margin-left: 2%;
         }
 
+        #container_left_heading {
+            margin-left: 6%;
+        }
+
+        #container_left_heading > :nth-child(1) {
+            color: rgb(145, 143, 143);
+            margin-top: 4%;
+            margin-bottom: 1%;
+            font-size: 16px;
+            font-weight: 550;
+        }
+
+        #container_left_heading > :nth-child(2) {
+            color: rgb(145, 143, 143);
+            margin-bottom: 2%;
+            font-size: 16px;
+            font-weight: 550;
+        } 
+
+        #container_left_heading > :nth-child(3) {
+            margin-bottom: 5%;
+        }
+
+        #container_left_price {
+            margin-left: 6%;
+        }
+
+        #container_left_price :nth-child(1) {
+            margin-top: 2%;
+            margin-bottom: 6%;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        #container_left_price :nth-child(2) {
+            width: 85%;
+        }
+
+        #container_left_price :nth-child(3) {
+            margin-top: 3%;
+            margin-bottom: 5%;
+        }
+
+        #slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        #slider:hover {
+            opacity: 1;
+        }
+
+        #slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: rgb(255, 115, 0);
+            cursor: pointer;
+        }
+
+        #slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: rgb(255, 115, 0);
+            cursor: pointer;
+        }
+
+        .price_box {
+            border: 1px solid rgb(207, 206, 206);
+            
+        }
+
+        #container_left_brand {
+            margin-left: 6%;
+        }
+
+        #container_left_brand :nth-child(1) {
+            margin-top: 5%;
+            margin-bottom: 4%;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+       input {
+           width: 17px;
+           height: 17px;
+       }
+
+       #container_left_ram {
+            margin-left: 6%;
+       }
+
+       #container_left_ram :nth-child(1) {
+            margin-top: 5%;
+            margin-bottom: 4%;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
         #container_right {
-            border: 2px solid red;
             background-color: white;
             width: 70%;
             margin-left: 1.5%;
+        }
+
+        #container_right_heading {
+            display: flex;
+            color: #222;
+            margin-top: 1.5%;
+            margin-bottom: 2%;
+            margin-left: 2%;
+        }
+
+        #filter-select {
+            border: 1px solid white;
+        }
+
+        #sort_filter {
+            border: 1px solid rgb(207, 206, 206);
+            cursor: pointer;
+            margin-left: 55%;
+            padding: 8px 5px;
+            
         }
 
         .product_row {
@@ -71,6 +200,13 @@
             color: #666;;
             margin-top: 1%;
         }
+
+        hr {
+            border: 0.1px solid rgb(226, 226, 226) ;
+        }
+
+       
+
     </style>
 </head>
 
@@ -81,12 +217,129 @@
         <div id="container">
 
             <div id="container_left">
-                left
+                
+                <div id="container_left_heading">
+                    <div>
+                     Mobile, Tablets & Accessories
+                    </div>
+
+                    <div>
+                        Mobiles
+                    </div>
+
+                    <div>
+                      <strong> Smart Phones </strong> 
+                    </div>
+                </div>
+
+                <hr>
+
+                <div id="container_left_price">
+                    <div>
+                        Price
+                    </div>
+
+                    <div>
+                        <input type="range" id="slider" name="volume" min="0" max="150000" step="100">
+                    </div>
+
+                    <div>
+                        <span class="price_box">
+                            ₹150000
+                        </span>
+
+                        <span>
+                            to
+                        </span>
+
+                        <span class="price_box">
+                            ₹150000
+                        </span>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div id="container_left_brand">
+
+                    <div>
+                        Brand
+                    </div>
+
+                    <input type="checkbox" id="brand1" name="brand1">
+                    <label for="brand1"> Apple </label><br>
+                   
+                    <input type="checkbox" id="brand2" name="brand2">
+                    <label for="brand2"> Samsung </label><br>
+
+                    <input type="checkbox" id="brand3" name="brand3">
+                    <label for="brand3"> Redmi </label><br>
+                    
+                    <input type="checkbox" id="brand4" name="brand4">
+                    <label for="brand4"> Realme </label><br>
+
+                    <input type="checkbox" id="brand5" name="brand5">
+                    <label for="brand5"> Vivo </label><br>
+                    
+                    <input type="checkbox" id="brand6" name="brand6">
+                    <label for="brand6"> Oppo </label><br>
+                </div>
+
+                <hr>
+
+                <div id="container_left_ram">
+
+                    <div>
+                        Ram
+                    </div>
+
+                    <input type="checkbox" id="ram1" name="brand1">
+                    <label for="brand1"> 8GB </label><br>
+                   
+                    <input type="checkbox" id="ram2" name="brand2">
+                    <label for="brand2"> 6GB </label><br>
+
+                    <input type="checkbox" id="ram3" name="brand3">
+                    <label for="brand3"> 4GB </label><br>
+                    
+                    <input type="checkbox" id="ram4" name="brand4">
+                    <label for="brand4"> 3GB </label><br>
+
+                    <input type="checkbox" id="ram5" name="brand5">
+                    <label for="brand5"> 2GB </label><br>
+                </div>
             </div>
 
 
 
             <div id="container_right">
+
+                <div id="container_right_heading">
+
+                    <div style="font-size: 22px; letter-spacing: 1px; margin-top: 0.5%;">
+                        Best Selling Smartphones
+                    </div>
+
+                    <div id="sort_filter">
+                        <span>
+                            Sort by
+                        </span>
+                        
+                        <span>
+                            <select name="filter" id="filter-select">
+                                <option value="popular">Popular</option>
+                                <option value="new">New</option>
+                                <option value="l2h">Low to High Price</option>
+                                <option value="h2l">Hight to Low Price</option>
+                            </select>
+                        </span>
+                        
+                    </div>
+
+                </div>
+
+                <hr>
+
                 <div class="product_row">
 
                     <div class="product_box">
