@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+  <link rel="stylesheet" href="../css/checkout.css">
+  
+    
+</head>
+
+
+<body>
+    <div>
+        <div id="middle_box">
+            <span> <strong> Payment </strong> </span>
+            <strong><span id="pay"> pay </span></strong>
+        </div>
+
+
+        <div id="lower_box">
+            <div id="lower_box_left">
+                <div id="active">&nbsp; DEBIT/CREDIT CARD </div>
+                <hr>
+                <div class="inactive"> WALLET </div>
+                <hr>
+                <div class="inactive"> UPI </div>
+                <hr>
+                <div class="inactive"> NET BANKING </div>
+                <hr>
+                <div class="inactive"> CASH ON DELIVERY </div>
+                <p>Use online payment for safety and to avail </br> attractive cashback offers.</p>
+                <hr>
+            </div>
+
+
+            <div>
+                <div id="lower_right_box">
+
+                    
+                        <div>
+                            <img width="20px" src="https://images.bewakoof.com/web/Add-card-icon-1600332484.png" alt="">
+                            <span id="new_card">Add New Card</span>
+                        </div>
+
+
+                        <div>
+                            <div id="card_num">
+                                <input id="num_card" type="number " autocomplete="new-password" name="card_no"
+                                    placeholder="XXXX XXXX XXXX XXXX" minlength="16" maxlength="16" >
+                            </div>
+
+                            <div id="card_name">
+                                <input type="text" name="card_name" placeholder="Name On Card">
+                            </div>
+
+                            <div id="card_expiry_cvv">
+                                <input type="year" name="card_expiry" placeholder="Expiry(MM/YY)" maxlength="5">
+                                <input style="margin-left: 10px;" type="password" name="card_CVV" placeholder="CVV">
+                            </div>
+
+                            <div id="card_check_box">
+                                <input id="check_box" type="checkbox" name="card_check">
+                                <label for="card_check"> <strong> Securely save this card for faster payments. </strong>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div
+                            style="font-size: 10px; text-align: justify; opacity: 0.5; margin-top: 8px; margin-bottom: 25px; letter-spacing: 0.7px ">
+                            This transaction you make is totally secure. We don't save </br> your CVV number.
+                        </div>
+
+                        <div>
+                            <!-- <a href="ordercomplete.html"> <button id="payment" onclick=" ">PAY NOW</button></a> -->
+                           <a href="ordercomplete.html"> <button onclick="pay_now()">pay now</button></a>
+                        </div>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
