@@ -1,6 +1,7 @@
 
     #navbar{
-        background-color: white;
+        background-color: #ffffff;
+        
     }
     #navbar_1{
         width: 100%;
@@ -91,7 +92,7 @@
     }#search_box{
         display: flex;
     }#body{
-        height: 200px;
+        height: 400px;
     }#hr{
         margin-top: -8px;
     }
@@ -162,7 +163,7 @@
         height: 40px;
         padding: 10px;
         background: #0b0c0c;
-        color: white;
+        /* color: rgb(68, 0, 194); */
         font-size: 17px;
         border: 1px solid grey;
         border-left: none;

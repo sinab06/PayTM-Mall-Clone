@@ -1,0 +1,50 @@
+#cart{
+    display: grid;
+    grid-template-columns: 70% 25%;
+    grid-gap: 3%;
+    background-color: rgb(247, 247, 247);
+
+
+}
+#product_cart{
+    background-color: white;
+    margin-top: 4%;
+    width: 99%;
+    margin-left: 4%;
+    margin-bottom: 2%;
+    height: 600px;
+    border: 1px solid black;
+}
+
+#cart_price{
+    margin-top: 11%;
+    width: 98%;
+    height: 450px;
+    margin-left: 2%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#payment_summ{
+  margin-left: 5%;
+}
+
+#bag_price{
+    margin-left: 5%;
+}
+
+#cart_price>button{
+    margin-top: 5%;
+    width: 90%;
+    margin-left: 5%;
+    height: 40px;
+}
+
+#cart_price_button2{
+    width: 100%;
+    height: 40px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
