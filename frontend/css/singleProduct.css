@@ -12,11 +12,13 @@ body {
     display: grid;
     grid-template-columns: 78% 19%;
     grid-gap: 2%;
+    background-color: white;
 }
 
 .main-append-box {
     display: grid;
     grid-template-columns: 50% 50%;
+    background-color: white;
 }
 
 .samsung-img {
