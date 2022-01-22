@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/singleProduct.css">
+</head>
+
+<body>
+
+    <!-- MAIN BOX  -->
+    
+            <div class="max_span">
+                <p><span>Home</span> <span>/</span> <span>Mobiles, Tablets & Accessories</span> <span>/</span> <span>Mobiles</span> <span>/</span> <span>Smart Phones</span></p>
+            </div>
+
+    <div class="outside-main-box">
+
+        <!-- JAVASCRIPT APPEND BOX -->
+
+        <div class="main-append-box">
+
+            <!-- IMAGE BOX -->
+            <div id="image_container_box">
+                <div id="image_container_left">
+                    <div id="image_container_left1"></div>
+                    <div id="image_container_left2"></div>
+                </div>
+                <div>
+                    <div id="image_container_right">
+
+                    </div>
+                </div>
+            </div>
+            <!-- IMAGE BOX -->
+
+            <!-- FULL INFORMATION BOX -->
+            <div>
+
+
+                <!-- UPPER SAMSUNG PART -->
+                <div class="upper-samsung-part">
+                    <div class="samsung-img">
+                        <img
+                            src="https://assetscdn1.paytm.com/images/catalog/brand/1593404973472.JPG?imwidth=140&impolicy=hq">
+
+                    </div>
+                    <div>
+                        <p>Sold By</p>
+                        <p>Authorized Samsung store</p>
+                    </div>
+                    <div>
+                        <p>Brand Certified Seller</p>
+                    </div>
+                    <div>
+                        <p>100% Genuine Products</p>
+                    </div>
+                </div>
+                <!-- UPPER SAMSUNG PART -->
+
+                <!-- NAME FULL PART -->
+                <div class="model-name">
+                    <p id="main_name_tag"></p>
+                    <p>
+                        <span id="price_first"></span>
+                        <span id="price_second"></span>
+                        <span id="discount_first"></span>
+                    </p>
+                    <p class="inclusive_tax">Inclusive of all Taxes</p>
+                    <div style="display: flex;">
+                        <div><img class="star_image" src="https://lh3.googleusercontent.com/GKHu_F1jJlVmPt6AWxVlKXobK3CC1f_on7a8A1pRQDI0MwCqFtrhHfro62DOQOQIjPYLY8yz100_weENObs_SIRN9zQt6jd9UsagWa49"></div>
+                        <p style="margin: 14px; color: #999;">5 Ratings & 3 Reviews</p>
+                    </div>
+                </div>
+                <!-- NAME FULL PART -->
+
+
+                <!-- BUY FOR FULL PART -->
+                <div>
+                    <p id="buy_price_first"></p>
+                    <p class="apply_promo">Apply this promo on cart</p>
+                    <div class="rupess_div">
+                        <div>
+                            <img class="rupess_red_img"
+                                src="https://assetscdn1.paytm.com/images/promo-engine/prod/CashBack.png?imwidth=64&impolicy=hq">
+                        </div>
+                        <div>
+                            <p class="PayTm_cash_worth">PayTm cash worth ₹200</p>
+                            <p class="promocode">Promocode:<span>RARK201</span></span></p>
+                            <p class="user_will">User Will Get Flat 10% Cashback, Up To Rs. 200 On Purchase Of Paytm
+                                Mall Products. Applicable On
+                                Paytm Payments Bank Ltd. VISA Debit Card Transactions.</p>
+                            <p class="terms_condition">Terms and Conditions.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- BUY FOR FULL PART -->
+
+                <!-- PRODUCT HIGHLIGHTS -->
+                <div>
+                    <p class="product_highlights">Product Highlights</p>
+                    <ul class="all_ul">
+                        <li>48MP + 5MP + 2MP Macro and 2MP Quad Camera / 8 MP Front Camera</li>
+                        <li>16.51 cm (6.5 inch) Big Display For Big Fun</li>
+                        <li id="battery_mobile"></li>
+                        <li id="ram_mobile"></li>
+                    </ul>
+                </div>
+                <!-- PRODUCT HIGHLIGHTS -->
+
+                <!-- LAST BUTTON -->
+                <div id="last_button_oranage"></div>
+                <!-- LAST BUTTON -->
+
+
+            </div>
+            <!-- FULL INFORMATION BOX -->
+
+        </div>
+
+        <!-- JAVASCRIPT APPEND BOX -->
+
+        <!-- RIGHT DELIVERY BOX -->
+
+        <div>
+
+        </div>
+
+        <!-- RIGHT DELIVERY BOX -->
+    </div>
+
+    <!-- MAIN BOX  -->
+
+
+</body>
+
+</html>
+
+<script>
+
+    let info_container = document.getElementById("info_container");
+
+    let main_name_tag = document.getElementById("main_name_tag");
+
+    let price_first = document.getElementById("price_first");
+
+    let price_second = document.getElementById("price_second");
+
+    let discount_first = document.getElementById("discount_first");
+
+    let buy_price_first = document.getElementById("buy_price_first");
+
+    let battery_mobile = document.getElementById("battery_mobile");
+
+    let ram_mobile = document.getElementById("ram_mobile");
+
+    let image_container_left1 = document.getElementById("image_container_left1");
+
+    let image_container_left2 = document.getElementById("image_container_left2");
+
+    let image_container_right = document.getElementById("image_container_right");
+
+    let last_button_oranage = document.getElementById('last_button_oranage');
+
+
+    let paytm_product = JSON.parse(localStorage.getItem("paytm_product"));
+
+    console.log(paytm_product);
+
+    let appendProduct = ({ battery, name, img1, img2, price1, price2, ram }) => {
+
+        let img_1 = document.createElement('img');
+        img_1.src = img1;
+
+        let img_2 = document.createElement("img");
+        img_2.src = img2;
+
+        main_name_tag.innerText = name;
+
+        price_first.innerText = "₹" + price1;
+
+        price_second.innerText = "MRP₹" + price2;
+
+        discount_first.innerText = "-" + Math.ceil(Math.random() * 20) + "%";
+
+        buy_price_first.innerText = "Buy for ₹" + (price1 - 300);
+
+        battery_mobile.innerText = (battery) + " mAh larger Battery with Adaptive Fast Charging"
+
+        ram_mobile.innerText = "RAM: " + (ram) + " GB / ROM: 128 GB";
+
+        let battery_p = document.createElement("p");
+        battery_p.innerText = battery;
+
+        let ram_p = document.createElement("p");
+        ram_p.innerText = ram;
+
+        let last_price_span = document.createElement("span");
+        last_price_span.innerText = "₹" + (price2)
+        last_button_oranage.innerText = "Buy Now ₹" + (price1);
+        last_button_oranage.append(last_price_span)
+
+
+        let small_image1 = document.createElement("img");
+        small_image1.src = img1;
+        let small_image2 = document.createElement("img");
+        small_image2.src = img2;
+
+        image_container_left1.append(small_image1);
+
+        image_container_left2.append(small_image2);
+
+        let all_image_data1 = {
+            img1
+        }
+
+        let all_image_data2 = {
+            img2
+        }
+
+        image_container_left1.onclick = () => {
+            showImage1(all_image_data1)
+        }
+
+        image_container_left2.onclick = () => {
+            showImage2(all_image_data2)
+        }
+
+
+        let cart_data = {
+                name,
+                img1,
+                price1,
+                price2,
+                ram
+            }
+
+        last_button_oranage.onclick = () => {
+            addToCart(cart_data)
+        }
+
+
+        let big_image = document.createElement('img');
+        big_image.src = img1;
+        image_container_right.append(big_image);
+
+
+    }
+
+    appendProduct(paytm_product)
+
+    let showImage1 = (image1) => {
+        image_container_right.innerHTML = null;
+        let big_image_1 = document.createElement("img");
+        big_image_1.src = image1.img1;
+        image_container_right.append(big_image_1)
+    }
+
+    let showImage2 = (image2) => {
+        image_container_right.innerHTML = null;
+        let big_image_2 = document.createElement("img");
+        big_image_2.src = image2.img2;
+        image_container_right.append(big_image_2)
+    }
+
+    let addToCart = (all_data) => {
+        if(localStorage.getItem("paytm_cart") == undefined){
+            localStorage.setItem("paytm_cart", JSON.stringify([]))
+        }
+        let store_data = JSON.parse(localStorage.getItem("paytm_cart"));
+        console.log(store_data)
+        store_data.push(all_data)
+        localStorage.setItem("paytm_cart", JSON.stringify(store_data))
+    }
+</script>
