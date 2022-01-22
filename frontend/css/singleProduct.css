@@ -1,0 +1,215 @@
+body {
+    background-color: #f3f7f8;
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.outside-main-box {
+    display: grid;
+    grid-template-columns: 78% 19%;
+    grid-gap: 2%;
+}
+
+.main-append-box {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.samsung-img {
+    width: 40px;
+    height: 40px;
+}
+
+.samsung-img > img {
+    width: 40px;
+}
+
+.upper-samsung-part {
+    display: grid;
+    grid-template-columns: 15% 30% 30% 15%;
+    grid-gap: 1%;
+    padding: 25px;
+    padding-left: 0px;
+    padding-bottom: 15px;
+    border-bottom: 0.5px solid rgb(219, 219, 219);
+}
+
+.upper-samsung-part > div {
+    font-size: 11px;
+    font-weight: lighter;
+    margin: 10px;
+    line-height: 15px;
+}
+
+#main_name_tag {
+    font-size: 26px;
+    color: rgb(107, 107, 107);
+    font-weight: lighter;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.model-name {
+    margin-top: 25px;
+    padding-bottom: 30px;
+    border-bottom: 0.5px solid rgb(233, 233, 233);
+}
+
+#buy_price_first {
+    color: #e94c24;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#image_container_box {
+    display: grid;
+    grid-template-columns: 15% 70%;
+    grid-gap: 5%;
+}
+
+#image_container_left1 > img {
+    height: 100px;
+    width: fit-content;
+    padding: 10px;
+}
+
+#image_container_left2 > img {
+    height: 100px;
+    width: fit-content;
+    padding: 10px;
+}
+
+#image_container_right > img {
+    height: 250px;
+    width: fit-content;
+}
+
+#image_container_right {
+    line-height: 700px;
+    width: fit-content;
+    margin: auto;
+}
+
+#last_button_oranage {
+    color: white;
+    font-weight: bold;
+    background-color: #e94c24;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    width: 90%;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+#last_button_oranage > span {
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.all_ul {
+    color: #666;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.product_highlights {
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+.PayTm_cash_worth {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.promocode {
+    background-color: rgb(228, 245, 228);
+    width: fit-content;
+    padding: 3px;
+    margin: 5px;
+    font-size: 12px;
+}
+
+.promocode > span {
+    font-weight: bolder;
+}
+
+.user_will {
+    font-weight: lighter;
+    width: 500px;
+    font-size: 15px;
+}
+
+.terms_condition {
+    text-decoration: underline;
+    color: #666;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.apply_promo {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+.rupess_div {
+    display: grid;
+    grid-template-columns: 8% 80%;
+}
+
+.rupess_red_img {
+    width: 40px;
+}
+
+#price_first {
+    font-size: 23px;
+    padding: 3px;
+}
+
+#price_second {
+    font-size: 18px;
+    text-decoration: line-through;
+    color: #999;
+}
+
+#discount_first {
+    font-size: 14px;
+    color: rgb(59, 199, 59);
+}
+
+.inclusive_tax {
+    font-size: 10px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.star_image {
+    width: fit-content;
+    height: 33px;
+    padding: 10px;
+}
+
+.max_span > p > span {
+    color: #666;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 5px;
+}
+
+.max_span > p > span:nth-child(7) {
+    font-weight: bold;
+    color: black;
+}
+
+.max_span {
+    padding: 15px;
+}
