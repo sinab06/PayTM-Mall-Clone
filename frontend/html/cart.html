@@ -13,22 +13,24 @@
 
     <div id="navbar"></div>
 
-     
+    <p id="add"></p>
         <div id="cart">
+         
           <div id="product_cart">
+
 
           </div>
           <div id="cart_price">
            <h3 id="payment_summ">Payment Summary</h3>
            <hr>
-           <p id="bag_price">Bag Total</p>
-           <p id="bag_price">Shipping Charges</p>
+         <p id="add_qun">Bag Total<span id="bagprice"></span> </p>
+           <p id="bag_price">Shipping Charges<span id="bagprice1">Free</span></p>
            <hr>
-           <p id="bag_price">Amount Payable</p>
+           <p id="add_qun1">Amount Payable<span id="bagprice2"></span></p>
            <hr>
            <button id="cart_price_button">Use GSTIN for claiming input tax</button>
 
-           <button id="cart_price_button2">Select Address</button>
+           <button id="cart_price_button2">CheckOut Page</button>
 
            <button id="cart_price_button3">Continue Shopping</button>
           </div>
@@ -56,19 +58,7 @@
      
 </script>
 
-<script>
 
-    window.onscroll = function() {myFunction()};
-    
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
 
-    </script>
+
+<script src="/frontend/js/cart.js"></script>
