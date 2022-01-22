@@ -203,4 +203,65 @@ body{
     }
 
 
-  
+    #mainContainer {
+        /* width: 80%; */
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(4,23%);
+        grid-gap: 2%;
+        font-family: Roboto,-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,sans-serif;
+    }
+    
+    .product-main-img {
+        width: fit-content;
+        /* text-align: center; */
+        margin: auto;
+        height: 190px;
+    }
+    
+    #mainContainer > div > div {
+        text-align: center;
+    }
+    
+    .product-main-name {
+        color: #666;
+        font-weight: lighter;
+        font-size: 15px;
+        margin: 2px;
+    }
+    
+    .product-main-price1 {
+        font-weight: 500;
+        font-size: 19px;
+    }
+    
+    .product-main-orange {
+        color: orangered;
+        font-weight: 600;
+        font-size: 13px;
+        margin: 1px;
+    }
+    
+    .product-price-p {
+        margin: 5px;
+    }
+    
+    .product-main-price2 {
+        font-weight: lighter;
+        text-decoration: line-through;
+        color: #666;
+        font-size: 17px;
+    }
+    
+    .product-main-discount {
+        color: #09ac63;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 5px;
+    }
+    
+    .product-main-cashback {
+        margin: 2px;
+        font-size: 12px;
+        color: #666;
+    }
