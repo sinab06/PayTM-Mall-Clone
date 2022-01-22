@@ -230,6 +230,19 @@
         }
 
 
+        let cart_data = {
+                name,
+                img1,
+                price1,
+                price2,
+                ram
+            }
+
+        last_button_oranage.onclick = () => {
+            addToCart(cart_data)
+        }
+
+
         let big_image = document.createElement('img');
         big_image.src = img1;
         image_container_right.append(big_image);
@@ -251,5 +264,15 @@
         let big_image_2 = document.createElement("img");
         big_image_2.src = image2.img2;
         image_container_right.append(big_image_2)
+    }
+
+    let addToCart = (all_data) => {
+        if(localStorage.getItem("paytm_cart") == undefined){
+            localStorage.setItem("paytm_cart", JSON.stringify([]))
+        }
+        let store_data = JSON.parse(localStorage.getItem("paytm_cart"));
+        console.log(store_data)
+        store_data.push(all_data)
+        localStorage.setItem("paytm_cart", JSON.stringify(store_data))
     }
 </script>
