@@ -1,5 +1,5 @@
 body {
-    background-color: #f3f7f8;
+    /* background-color: pink; */
     font-family: Roboto,-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,sans-serif;
 }
 
@@ -9,10 +9,12 @@ body {
 }
 
 .outside-main-box {
+    width: 95%;
+    margin: auto;
     display: grid;
     grid-template-columns: 78% 19%;
     grid-gap: 2%;
-    background-color: white;
+    /* background-color: white; */
     margin-top: 70px;
 }
 
@@ -215,4 +217,9 @@ body {
 
 .max_span {
     padding: 15px;
+}
+
+.shipping_free > p {
+    font-size: 12px;
+    padding: 5px;
 }
