@@ -72,3 +72,9 @@ showdata(cart);
 }
 let arr = totalfinal;
 localStorage.setItem("totalfinal", JSON.stringify(arr));
+
+
+function chechout() {
+  window.location.assign("checkout.html");
+}
+
