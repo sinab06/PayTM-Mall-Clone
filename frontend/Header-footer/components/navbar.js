@@ -23,7 +23,7 @@ function navbar() {
                <p id="cart_logo3">Cart</p>
            </div>
            <div id="cart_logo2">
-           <img id="cart_logo4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJt13zsYYjKk8ZsOiWrzIjHAVdh7-u4FMEtg&usqp=CAU" alt="">
+           <img id="cart_logo4" src="http://cdn.onlinewebfonts.com/svg/img_337531.png">
                <p id="cart_logo5">Log In/Sign Up</p>
            </div>
        </div>
