@@ -126,6 +126,8 @@ body{
         background-color: white;
         width: 70%;
         margin-left: 1.5%;
+        overflow-y: scroll;
+        height: 3000px;
     }
 
     #container_right_heading {
