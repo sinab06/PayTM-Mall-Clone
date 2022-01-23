@@ -146,14 +146,15 @@
 
     //www.localhost:1234/product
 
-
+    let data;
     let container = document.getElementById("mainContainer");
 
     async function getData() {
         try {
             let response = await fetch("http://www.localhost:1234/product");
             let res = await response.json();
-            appendProduct(res)
+            // appendProduct(res)
+            data = res;
             console.log(res);
         }
         catch (err) {
@@ -232,5 +233,27 @@
         window.location.assign("singleProduct.html")
     }
 
+     //Sorting products from low to high
+     let sortLowToHigh = () => {
+        
+
+        let product = data;
+
+
+      product.sort(function(a,b){
+          return a.price1 - b.price1;
+      });
+      appendProduct(product)
+    }
+
+    setTimeout(sortLowToHigh,1000)
+
+    //Sorting products from High to Low
+    function sortHighToLow(){
+      product.sort(function(a,b){
+          return b.Price - a.Price;
+      });
+      getData();
+    }
 
 </script>
