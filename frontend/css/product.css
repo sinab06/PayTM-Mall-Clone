@@ -276,11 +276,20 @@ body{
     .product_two {
         color: #666;
         font-size: 25px;
+        font-weight: lighter;
     }
 
     .top_smartphones {
         display: grid;
-        grid-template-columns: 40% 40%;
+        grid-template-columns: 40% 50%;
         grid-gap: 5%;
-        border-bottom: 0.5px solid #999;
+        border-bottom: 0.5px solid #d8d9da;
+    }
+
+    #select_options {
+        margin: 20px;
+        width: 200px;
+        height: 30px;
+        border-color: #d3d3d3;
+        color: #666;
     }

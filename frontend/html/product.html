@@ -130,10 +130,15 @@
             <div id="container_right">
 
                 <div class="top_smartphones">
-                    <p> <span class="smartphones_span">SmartPhones</span> <span class="product_two">- 282 Products</span> </p>
+                    <p> <span class="smartphones_span">SmartPhones</span> <span class="product_two">- 282
+                            Products</span> </p>
 
-                    <div>
-
+                    <div style="text-align: right;">
+                        <select name="sorting" id="select_options" onchange="run()">
+                            <option>Select</option>
+                            <option>Price Low to High</option>
+                            <option>Price High to Low</option>
+                        </select>
                     </div>
                 </div>
 
@@ -241,33 +246,43 @@
         window.location.assign("singleProduct.html")
     }
 
-     //Sorting products from low to high
-     let sortLowToHigh = () => {
+    //Sorting products from low to high
+    let sortLowToHigh = () => {
         container.innerHTML = null;
 
         let product = data;
 
 
-      product.sort(function(a,b){
-          return a.price1 - b.price1;
-      });
-      appendProduct(product)
+        product.sort(function (a, b) {
+            return a.price1 - b.price1;
+        });
+        appendProduct(product)
     }
 
-    setTimeout(sortLowToHigh,1000)
-    
-    
+    // setTimeout(sortLowToHigh, 1000)
+
+
     //Sorting products from High to Low
-    function sortHighToLow(){
+    function sortHighToLow() {
 
         container.innerHTML = null;
         let product = data;
-      product.sort(function(a,b){
-          return b.price1 - a.price1;
-      });
-      appendProduct(product)
+        product.sort(function (a, b) {
+            return b.price1 - a.price1;
+        });
+        appendProduct(product)
     }
 
-    setTimeout(sortHighToLow, 3000)
+    // setTimeout(sortHighToLow, 3000)
 
+    function run(){
+        var getValue = document. getElementById('select_options').value;
+        
+        if(getValue === "Price Low to High"){
+            sortLowToHigh()
+        }
+        else if(getValue === "Price High to Low"){
+            sortHighToLow()
+        }
+    }
 </script>
