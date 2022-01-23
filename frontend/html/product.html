@@ -129,6 +129,14 @@
 
             <div id="container_right">
 
+                <div class="top_smartphones">
+                    <p> <span class="smartphones_span">SmartPhones</span> <span class="product_two">- 282 Products</span> </p>
+
+                    <div>
+
+                    </div>
+                </div>
+
                 <div id="mainContainer"></div>
 
             </div>
@@ -153,7 +161,7 @@
         try {
             let response = await fetch("http://www.localhost:1234/product");
             let res = await response.json();
-            // appendProduct(res)
+            appendProduct(res)
             data = res;
             console.log(res);
         }
@@ -235,7 +243,7 @@
 
      //Sorting products from low to high
      let sortLowToHigh = () => {
-        
+        container.innerHTML = null;
 
         let product = data;
 
@@ -247,13 +255,19 @@
     }
 
     setTimeout(sortLowToHigh,1000)
-
+    
+    
     //Sorting products from High to Low
     function sortHighToLow(){
+
+        container.innerHTML = null;
+        let product = data;
       product.sort(function(a,b){
-          return b.Price - a.Price;
+          return b.price1 - a.price1;
       });
-      getData();
+      appendProduct(product)
     }
+
+    setTimeout(sortHighToLow, 3000)
 
 </script>

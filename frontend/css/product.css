@@ -1,5 +1,6 @@
 body{
     background-color: #f3f7f8;
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,sans-serif;
    }
 
     #container{
@@ -264,4 +265,22 @@ body{
         margin: 2px;
         font-size: 12px;
         color: #666;
+    }
+
+    .smartphones_span {
+        font-size: 25px;
+        font-weight: 400;
+        margin-left: 30px;
+    }
+
+    .product_two {
+        color: #666;
+        font-size: 25px;
+    }
+
+    .top_smartphones {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-gap: 5%;
+        border-bottom: 0.5px solid #999;
     }
