@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+#top{
+    margin-top: 25px;
+}
+
 .circle-images-div1 {
     background-image: url("https://assetscdn1.paytm.com/images/catalog/view_item/783440/1617031913307.png?imwidth=140&impolicy=hq");
 }
