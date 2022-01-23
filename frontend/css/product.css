@@ -293,3 +293,7 @@ body{
         border-color: #d3d3d3;
         color: #666;
     }
+
+    .product_main_div {
+        margin-top: 20px;
+    }
