@@ -1,5 +1,6 @@
 body{
     background-color: #f3f7f8;
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,sans-serif;
    }
 
     #container{
@@ -263,5 +264,32 @@ body{
     .product-main-cashback {
         margin: 2px;
         font-size: 12px;
+        color: #666;
+    }
+
+    .smartphones_span {
+        font-size: 25px;
+        font-weight: 400;
+        margin-left: 30px;
+    }
+
+    .product_two {
+        color: #666;
+        font-size: 25px;
+        font-weight: lighter;
+    }
+
+    .top_smartphones {
+        display: grid;
+        grid-template-columns: 40% 50%;
+        grid-gap: 5%;
+        border-bottom: 0.5px solid #d8d9da;
+    }
+
+    #select_options {
+        margin: 20px;
+        width: 200px;
+        height: 30px;
+        border-color: #d3d3d3;
         color: #666;
     }

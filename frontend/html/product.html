@@ -129,6 +129,19 @@
 
             <div id="container_right">
 
+                <div class="top_smartphones">
+                    <p> <span class="smartphones_span">SmartPhones</span> <span class="product_two">- 282
+                            Products</span> </p>
+
+                    <div style="text-align: right;">
+                        <select name="sorting" id="select_options" onchange="run()">
+                            <option>Select</option>
+                            <option>Price Low to High</option>
+                            <option>Price High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
                 <div id="mainContainer"></div>
 
             </div>
@@ -146,7 +159,7 @@
 
     //www.localhost:1234/product
 
-
+    let data;
     let container = document.getElementById("mainContainer");
 
     async function getData() {
@@ -154,6 +167,7 @@
             let response = await fetch("http://www.localhost:1234/product");
             let res = await response.json();
             appendProduct(res)
+            data = res;
             console.log(res);
         }
         catch (err) {
@@ -232,5 +246,43 @@
         window.location.assign("singleProduct.html")
     }
 
+    //Sorting products from low to high
+    let sortLowToHigh = () => {
+        container.innerHTML = null;
 
+        let product = data;
+
+
+        product.sort(function (a, b) {
+            return a.price1 - b.price1;
+        });
+        appendProduct(product)
+    }
+
+    // setTimeout(sortLowToHigh, 1000)
+
+
+    //Sorting products from High to Low
+    function sortHighToLow() {
+
+        container.innerHTML = null;
+        let product = data;
+        product.sort(function (a, b) {
+            return b.price1 - a.price1;
+        });
+        appendProduct(product)
+    }
+
+    // setTimeout(sortHighToLow, 3000)
+
+    function run(){
+        var getValue = document. getElementById('select_options').value;
+        
+        if(getValue === "Price Low to High"){
+            sortLowToHigh()
+        }
+        else if(getValue === "Price High to Low"){
+            sortHighToLow()
+        }
+    }
 </script>
