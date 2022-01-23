@@ -15,7 +15,13 @@
 
 <body>
 
-    <div>
+    <!-- NAVIGATION BAR IMPORTING -->
+
+    <div id="navbar"></div>
+
+    <!-- NAVIGATION BAR IMPORTING -->
+
+    <div class="product_main_div">
 
         <div id="heading">
 
@@ -149,6 +155,11 @@
         </div>
     </div>
 
+      <!-- NAVIGATION BAR IMPORTING -->
+
+      <div id="footer"></div>
+
+      <!-- NAVIGATION BAR IMPORTING -->
 </body>
 
 </html>
@@ -285,4 +296,35 @@
             sortHighToLow()
         }
     }
+</script>
+
+<script type="module">
+
+    import navbar from "../js/components/navbar.js";
+    let navbar_div = document.getElementById("navbar");
+    navbar_div.innerHTML = navbar();
+
+
+
+    import footer from "../js/components/footer.js";
+    let footer_div = document.getElementById("footer");
+    footer_div.innerHTML = footer();
+
+</script>
+
+<script>
+
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
 </script>
