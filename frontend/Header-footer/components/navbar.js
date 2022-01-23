@@ -7,7 +7,7 @@ function navbar() {
 
    <div id="navbar_a">
        <div>
-           <button id="navbar_left">☰ Shop By Category</button>
+           <button onclick="productMove()" id="navbar_left">☰ Shop By Category</button>
        </div>
        <div id="search_box">
            <input id="navbar_input" type="text" placeholder="search by product brands and categries" >
